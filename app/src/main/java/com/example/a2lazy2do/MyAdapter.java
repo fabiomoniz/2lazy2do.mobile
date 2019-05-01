@@ -45,8 +45,13 @@ public class MyAdapter extends ArrayAdapter<String> {
             mViewHolder = (ViewHolder) convertView.getTag();
         }
 
-        //mViewHolder.mImage.setImageResource(tasks.getImage[position]); // setting the image if there is one (if statement needed)
-        //mViewHolder.mText.setText(tasks.getText[position]);  //set text / subject
+        if(tasks.get(position).getImage() == null) {
+            mViewHolder.mImage.setVisibility(View.GONE);
+        }
+        else{
+            //mViewHolder.mImage.setImageResource(tasks.get(position).getImage()); // setting the image if there is one (if statement needed)
+        }
+        mViewHolder.mText.setText(tasks.get(position).getTitle());
 
         return convertView;
     }
