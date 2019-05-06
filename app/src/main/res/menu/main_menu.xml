@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/file"
+        android:title="Add" >
+        <!-- "file" submenu -->
+        <menu>
+            <item android:id="@+id/action_newList"
+                android:title="List" />
+            <item android:id="@+id/actoin_newCheckList"
+                android:title="Checklist" />
+        </menu>
+    </item>
 
-
-
-    <item android:id="@+id/action_newList"
-        android:title="List"/>
-
-    <item android:id="@+id/actoin_newCheckList"
-        android:title="Checklist"/>
+    <item
+        android:id="@+id/action_signIn"
+        android:title="Sign In"/>
 
 </menu>
