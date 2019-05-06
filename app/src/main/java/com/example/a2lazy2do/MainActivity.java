@@ -30,4 +30,28 @@ public class MainActivity extends AppCompatActivity {
         MyAdapter myAdapter = new MyAdapter(MainActivity.this , tasks);
         mListView.setAdapter(myAdapter);
     }
+        Task task = new Task("something" , "something" , null );
+        tasks.add(task) ;
+
+        MyAdapter myAdapter = new MyAdapter(MainActivity.this , tasks);
+        mListView.setAdapter(myAdapter);
+        mToolbar.inflateMenu(R.menu.main_menu) ;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu) ;
+
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem menu) {
+        switch (menu.getItemId()) {
+            case R.id.action_newList:
+                return true;
+                default:
+                    return super.onOptionsItemSelected(menu) ;
+        }
+    }
+
 }
