@@ -8,6 +8,6 @@
         android:title="List"/>
 
     <item android:id="@+id/actoin_newCheckList"
-        android:title="checklist"/>
+        android:title="Checklist"/>
 
 </menu>
