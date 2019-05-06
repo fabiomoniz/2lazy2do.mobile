@@ -6,9 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
 import android.support.v7.widget.Toolbar;
-
 import com.example.a2lazy2do.BE.Task;
-
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -33,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         mListView.setAdapter(myAdapter);
 
         Task task = new Task("something" , "something" , null );
-        tasks.add(task);
+        tasks.add(task) ;
 
         mToolbar.inflateMenu(R.menu.main_menu) ;
     }
