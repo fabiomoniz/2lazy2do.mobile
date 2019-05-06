@@ -3,7 +3,7 @@ package com.example.a2lazy2do;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
-import android.widget.Toolbar;
+import android.support.v7.widget.Toolbar;
 
 import com.example.a2lazy2do.BE.Task;
 
@@ -21,12 +21,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
         mListView = (ListView) findViewById(R.id.listview);
 
         tasks = new ArrayList<>();
-        Task task = new Task("something" , "something" , null );
-        tasks.add(task);
+        mToolbar.setTitle("2Lazy2Do");
 
         MyAdapter myAdapter = new MyAdapter(MainActivity.this , tasks);
         mListView.setAdapter(myAdapter);
