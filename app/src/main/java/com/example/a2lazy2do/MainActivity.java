@@ -2,11 +2,11 @@ package com.example.a2lazy2do;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ListView;
 import android.support.v7.widget.Toolbar;
-
 import com.example.a2lazy2do.BE.Task;
-
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         MyAdapter myAdapter = new MyAdapter(MainActivity.this , tasks);
         mListView.setAdapter(myAdapter);
     }
-        Task task = new Task("something" , "something" , null );
+        Task task = new Task("do something" , "something" , null );
         tasks.add(task) ;
 
         MyAdapter myAdapter = new MyAdapter(MainActivity.this , tasks);
