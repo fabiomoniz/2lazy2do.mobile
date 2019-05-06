@@ -2,6 +2,8 @@ package com.example.a2lazy2do;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ListView;
 import android.support.v7.widget.Toolbar;
 
@@ -29,12 +31,10 @@ public class MainActivity extends AppCompatActivity {
 
         MyAdapter myAdapter = new MyAdapter(MainActivity.this , tasks);
         mListView.setAdapter(myAdapter);
-    }
-        Task task = new Task("something" , "something" , null );
-        tasks.add(task) ;
 
-        MyAdapter myAdapter = new MyAdapter(MainActivity.this , tasks);
-        mListView.setAdapter(myAdapter);
+        Task task = new Task("something" , "something" , null );
+        tasks.add(task);
+
         mToolbar.inflateMenu(R.menu.main_menu) ;
     }
 
