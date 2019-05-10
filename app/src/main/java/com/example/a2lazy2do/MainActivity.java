@@ -18,7 +18,6 @@ import static com.example.a2lazy2do.R.id.action_signIn;
 
 public class MainActivity extends AppCompatActivity {
 
-    Toolbar mToolbar;
     ListView mListView;
     IDataAccess db;
     ArrayList<Task> tasks;
@@ -41,6 +40,11 @@ public class MainActivity extends AppCompatActivity {
         tasks.add(task2) ;
     }
 
+    /**
+     * this is where the options menu is made
+     * @param menu
+     * @return
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu, menu);
@@ -48,6 +52,12 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    /**
+     * this is where we click the menu
+     * we delete all things, or we add a new one
+     * @param item
+     * @return
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -75,9 +85,26 @@ public class MainActivity extends AppCompatActivity {
         startActivity(x);
     }
 
+    /**
+     * Starts Check List view, to add a new Check List
+     */
     public void addCheckList(){
         Intent x = new Intent(this, CheckList.class);
         startActivity(x);
+    }
+
+    public void delete() {
+        db.delete();
+
+        resetList();
+    }
+
+    /**
+     * Resets the List, to reflect changes made to database
+     */
+
+    private void resetList() {
+        tasks = db.getAll();
     }
 
 }
