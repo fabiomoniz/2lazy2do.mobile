@@ -6,7 +6,7 @@
         <menu>
             <item android:id="@+id/action_newList"
                 android:title="List" />
-            <item android:id="@+id/actoin_newCheckList"
+            <item android:id="@+id/action_newCheckList"
                 android:title="Checklist" />
         </menu>
     </item>

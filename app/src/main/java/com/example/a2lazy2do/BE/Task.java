@@ -1,6 +1,8 @@
 package com.example.a2lazy2do.BE;
 
-public class Task {
+import java.io.Serializable;
+
+public class Task implements Serializable {
 
     private String m_title;
     private String m_subject;
