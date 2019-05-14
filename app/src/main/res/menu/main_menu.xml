@@ -12,6 +12,6 @@
     </item>
 
     <item
-        android:id="@+id/action_signIn"
-        android:title="Sign In"/>
+        android:id="@+id/action_signOut"
+        android:title="Sign Out"/>
 </menu>
