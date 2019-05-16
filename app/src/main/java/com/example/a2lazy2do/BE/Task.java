@@ -1,26 +1,54 @@
 package com.example.a2lazy2do.BE;
 
-public class Task {
+import java.io.Serializable;
+import java.util.Date;
+import com.google.firebase.firestore.ServerTimestamp;
 
-    private String m_title;
-    private String m_subject;
-    private String m_image;
+public class Task implements Serializable {
 
-    public Task(String title , String subject , String image) {
-        m_title = title;
-        m_subject = subject;
-        m_image = image;
+    private String taskId , taskName , createdBy;
+
+    @ServerTimestamp
+    private Date timestamp;
+
+    public Task() {
     }
 
-    public void setTitle(String title) { this.m_title = title; }
+    public Task(String taskId, String taskName, String createdBy) {
+        this.taskId = taskId;
+        this.taskName = taskName;
+        this.createdBy = createdBy;
+    }
 
-    public String getTitle() { return m_title; }
+    public String getTaskId() {
+        return taskId;
+    }
 
-    public void setSubject(String subject) { this.m_subject = subject; }
+    public String getTaskName() {
+        return taskName;
+    }
 
-    public String getSubject() { return m_subject; }
+    public String getCreatedBy() {
+        return createdBy;
+    }
 
-    public void setImage(String image) { this.m_image = image; }
+    public Date getTimestamp() {
+        return timestamp;
+    }
 
-    public String getImage() { return m_image; }
+    public void setTaskId(String taskId) {
+        this.taskId = taskId;
+    }
+
+    public void setTaskName(String taskName) {
+        this.taskName = taskName;
+    }
+
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+    }
+
+    public void setTimestamp(Date timestamp) {
+        this.timestamp = timestamp;
+    }
 }
