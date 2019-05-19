@@ -1,4 +1,4 @@
-package com.example.a2lazy2do;
+package com.example.a2lazy;
 
 import org.junit.Test;
 

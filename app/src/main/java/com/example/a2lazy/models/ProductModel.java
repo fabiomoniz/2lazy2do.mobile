@@ -1,13 +1,12 @@
-package com.example.a2lazy2do.BE;
+package com.example.a2lazy.models;
 
-public class Product {
-
+public class ProductModel {
     private String productId, productName;
     private Boolean izCompleted;
 
-    public Product() {}
+    public ProductModel() {}
 
-    public Product(String productId, String productName, Boolean izCompleted) {
+    public ProductModel(String productId, String productName, Boolean izCompleted) {
         this.productId = productId;
         this.productName = productName;
         this.izCompleted = izCompleted;

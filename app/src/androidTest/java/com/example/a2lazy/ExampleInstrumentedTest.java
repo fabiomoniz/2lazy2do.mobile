@@ -1,4 +1,4 @@
-package com.example.a2lazy2do;
+package com.example.a2lazy;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.a2lazy2do", appContext.getPackageName());
+        assertEquals("com.example.a2lazy", appContext.getPackageName());
     }
 }

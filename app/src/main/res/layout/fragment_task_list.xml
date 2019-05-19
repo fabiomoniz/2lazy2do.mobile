@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".fragments.TaskListFragment">
 
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
         android:layout_height="match_parent"
         android:id="@+id/empty_view"
         android:gravity="center"
-        android:text="There are no Lists yet!"
+        android:text="There are no Products yet!"
         android:visibility="gone"/>
 
     <ProgressBar
